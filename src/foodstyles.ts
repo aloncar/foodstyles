@@ -15,4 +15,4 @@ let server = http.createServer(function (
 });
 
 server.listen(cnf.getPort());
-logger.info('Server started @ ${get}')
+logger.info('Server started @ ${get}');

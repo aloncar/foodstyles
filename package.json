@@ -1,0 +1,42 @@
+{
+  "name": "foodstyles",
+  "version": "1.0.0",
+  "description": "FoodStyles, Full-stack developer - Technical challenge - v2",
+  "main": "dist/foodstyles.js",
+  "types": "dist/foodstyles.d.ts",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "tsc-watch --target es2017 --outDir ./dist --onSuccess \"node -r dotenv-expand/config . dotenv_config_path=src/config/.env dotenv_config_debug=true\"",
+    "start": "node -r source-map-support/register -r dotenv-expand/config . dotenv_config_path=src/config/.env dotenv_config_debug=true",
+    "migrate": "npx sequelize-cli migrate"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "dotenv-expand": "11.0.6",
+    "tsc-watch": "^6.2.0",
+    "tslib": "^2.6.3",
+    "pg": "^8.12.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.3",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.2",
+    "@types/node": "^20.11.16",
+    "eslint": "^8.56.0",
+    "typescript": "^5.5.3",
+    "@types/vinyl": "2.0.12"
+  },
+  "author": "Aleksandar Lončar",
+  "license": "Proprietary",
+  "homepage": "https://github.com/aloncar/foodstyles#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aloncar/foodstyles.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aloncar/foodstyles/issues"
+  }
+}

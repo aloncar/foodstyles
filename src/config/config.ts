@@ -1,5 +1,8 @@
 const { loggers, format, transports } = require('winston');
 
+const dbPort = process.env.DB_HOST_PORT;
+const dbHost = process.env.DB_HOST;
+const dbName = process.env.DB_NAME;
 const dbUsername = process.env.DB_USERNAME;
 const dbPassword = process.env.DB_PASSWORD;
 
@@ -64,9 +67,26 @@ const getNODE_TLS_REJECT_UNAUTHORIZED = () => {
 const getPort = (): string => {
     return port;
   };
+
+  const getDbPort = (): string => {
+    return dbPort;
+  };
+  
+  const getHost = (): string => {
+    return dbHost;
+  };
+  
+  const getDbName = (): string => {
+    return dbName;
+  };
   
 const ConfigHelper = {
-    getPort
+    getPort,
+    getDbPort,
+    getDbUsername,
+    getDbPassword,
+    getHost,
+    getDbName
 };
 
 
